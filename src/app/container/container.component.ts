@@ -10,6 +10,10 @@ export class ContainerComponent implements OnInit {
     'font-weight-bold': true,
     'text-danger': true,
   };
+  myStyle = {
+    color: 'blue',
+    border: '1px solid blue',
+  };
   constructor() {}
   ngOnInit(): void {}
 }
