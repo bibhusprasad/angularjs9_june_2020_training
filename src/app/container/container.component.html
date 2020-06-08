@@ -1,3 +1,23 @@
 <ul>
-  <li *ngFor="let city of cities">{{ city }}</li>
+  <li *ngFor="let city of cities; index as i">{{ i + 1 }} -> {{ city }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let city of cities; first as f">{{ f }} -> {{ city }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let city of cities; last as l">{{ l }} -> {{ city }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let city of cities; first as f">
+    {{ city }} <span class="badge badge-primary" *ngIf="f">First</span>
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let city of cities; last as l">
+    {{ city }} <span class="badge badge-primary" *ngIf="l">Last</span>
+  </li>
 </ul>
