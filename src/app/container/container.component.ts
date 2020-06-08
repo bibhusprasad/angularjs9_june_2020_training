@@ -6,14 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.scss'],
 })
 export class ContainerComponent implements OnInit {
-  cssClass = {
-    'font-weight-bold': true,
-    'text-danger': true,
-  };
-  myStyle = {
-    color: 'blue',
-    border: '1px solid blue',
-  };
-  constructor() {}
+  flag = false;
+  constructor() {
+    setInterval(() => {
+      this.flag = !this.flag;
+    }, 1000);
+  }
   ngOnInit(): void {}
 }
