@@ -12,4 +12,8 @@ export class ContainerComponent implements OnInit {
   clickHandler() {
     console.log('Button is clicked!..');
   }
+
+  inputHandler(args) {
+    console.log('input handler is called!..', args.target.value);
+  }
 }
