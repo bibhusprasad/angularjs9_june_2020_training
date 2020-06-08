@@ -6,11 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.scss'],
 })
 export class ContainerComponent implements OnInit {
-  flag = false;
-  constructor() {
-    setInterval(() => {
-      this.flag = !this.flag;
-    }, 1000);
-  }
+  cities = ['Bangalore', 'Cuttack', 'Chennai', 'Bhubaneswar'];
+  constructor() {}
   ngOnInit(): void {}
 }
