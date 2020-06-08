@@ -13,6 +13,5 @@ export class ContainerComponent implements OnInit {
   pi = 3.14159265358979323846;
 
   constructor() {}
-
   ngOnInit(): void {}
 }
