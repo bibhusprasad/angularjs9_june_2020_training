@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
   @Input() currentScore: number;
+  @Input() today: Date;
 
   constructor() {}
 
