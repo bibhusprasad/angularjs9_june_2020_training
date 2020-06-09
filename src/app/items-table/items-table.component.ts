@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ToDoItem, todoList } from 'src/_data/data';
 
 @Component({
@@ -7,11 +7,13 @@ import { ToDoItem, todoList } from 'src/_data/data';
   styleUrls: ['./items-table.component.scss'],
 })
 export class ItemsTableComponent implements OnInit {
+  @Input() filterString: String;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   currentItems(): ToDoItem[] {
-    return todoList.filter((p) => p.status === 'open');
+    return todoList.filter((p) => p.status === this.filterString);
   }
 }
