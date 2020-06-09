@@ -3,7 +3,7 @@
     <p>Dashboard is coming!!</p>
   </div>
   <div class="col-md-8 p-1">
-    <app-items-table [filterString]="'open'"></app-items-table>
+    <app-items-table [list]="currentItems"></app-items-table>
   </div>
 </div>
 
@@ -12,6 +12,6 @@
     <p>Small table is coming!!</p>
   </div>
   <div class="col-md-8 p-1">
-    <app-items-table [filterString]="'completed'"></app-items-table>
+    <app-items-table [list]="pastItmes"></app-items-table>
   </div>
 </div>

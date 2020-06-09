@@ -7,13 +7,9 @@ import { ToDoItem, todoList } from 'src/_data/data';
   styleUrls: ['./items-table.component.scss'],
 })
 export class ItemsTableComponent implements OnInit {
-  @Input() filterString: String;
+  @Input() list: ToDoItem[];
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  currentItems(): ToDoItem[] {
-    return todoList.filter((p) => p.status === this.filterString);
-  }
 }
