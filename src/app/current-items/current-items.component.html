@@ -1,22 +1,22 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Id</th>
+      <th scope="col">Sl No</th>
       <th scope="col">Title</th>
       <th scope="col">Created On</th>
       <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of currentItems()">
+    <tr *ngFor="let item of currentItems(); index as i">
       <td>
-        {{ item.id }}
+        {{ i + 1 }}
       </td>
       <td>
         {{ item.title }}
       </td>
       <td>
-        {{ item.createdOn }}
+        {{ item.createdOn | date: "dd-MM-yyyy hh:mm:ss a" }}
       </td>
       <td>
         {{ item.status }}

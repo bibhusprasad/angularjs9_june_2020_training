@@ -11,7 +11,9 @@ export class CurrentItemsComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  count: number = 0;
+
   currentItems(): ToDoItem[] {
-    return todoList;
+    return todoList.filter((p) => p.status === 'open');
   }
 }
