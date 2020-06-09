@@ -7,6 +7,5 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
   constructor() {}
-
   ngOnInit(): void {}
 }

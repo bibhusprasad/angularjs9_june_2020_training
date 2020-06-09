@@ -6,8 +6,4 @@ import { DatePipe } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'todo-app';
-
-  constructor() {}
-}
+export class AppComponent {}
