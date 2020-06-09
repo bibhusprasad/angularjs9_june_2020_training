@@ -6,15 +6,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./container.component.scss'],
 })
 export class ContainerComponent implements OnInit {
-  @Input() name: string;
-
-  @Output() onNameChange = new EventEmitter();
-
   constructor() {}
 
   ngOnInit(): void {}
-
-  inputLocalHandler(args) {
-    this.onNameChange.emit(args.target.value);
-  }
 }
