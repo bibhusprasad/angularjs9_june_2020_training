@@ -9,9 +9,11 @@ import { DatePipe } from '@angular/common';
 export class AppComponent {
   title = 'todo-app';
 
+  parentName: string = '';
+
   constructor() {}
 
   eventHandler(args) {
-    console.log('Parent handler called', args);
+    this.parentName = args.toUpperCase();
   }
 }

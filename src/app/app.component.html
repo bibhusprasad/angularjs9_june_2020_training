@@ -1,5 +1,8 @@
 <app-navbar></app-navbar>
 
 <div class="container mt-4">
-  <app-container (customEvent)="eventHandler($event)"></app-container>
+  <app-container
+    (onNameChange)="eventHandler($event)"
+    [name]="parentName"
+  ></app-container>
 </div>
