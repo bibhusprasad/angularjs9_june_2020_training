@@ -10,7 +10,7 @@ export class AppComponent {
 
   constructor() {}
 
-  eventHandler() {
-    console.log('Parent handler called');
+  eventHandler(args) {
+    console.log('Parent handler called', args);
   }
 }

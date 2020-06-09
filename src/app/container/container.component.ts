@@ -14,7 +14,10 @@ export class ContainerComponent implements OnInit {
 
   inputLocalHandler(args) {
     if (args.target.value === 'abcd') {
-      this.customEvent.emit();
+      this.customEvent.emit({
+        on: new Date(),
+        message: 'From child component',
+      });
     }
   }
 }
