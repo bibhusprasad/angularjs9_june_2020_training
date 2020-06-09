@@ -13,11 +13,6 @@ export class ContainerComponent implements OnInit {
   ngOnInit(): void {}
 
   inputLocalHandler(args) {
-    if (args.target.value === 'abcd') {
-      this.customEvent.emit({
-        on: new Date(),
-        message: 'From child component',
-      });
-    }
+    this.customEvent.emit(args.target.value);
   }
 }
