@@ -5,20 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContainerComponent } from './container/container.component';
-import { CurrentItemsComponent } from './current-items/current-items.component';
+import { ItemsTableComponent } from './items-table/items-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ContainerComponent,
-    CurrentItemsComponent
+    ItemsTableComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
