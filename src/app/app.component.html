@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
 
 <div class="container mt-4">
-  <app-container [currentScore]="100" [today]="parrentToday"></app-container>
+  <app-container (customEvent)="eventHandler()"></app-container>
 </div>

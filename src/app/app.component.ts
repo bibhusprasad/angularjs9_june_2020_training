@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  parrentToday = new Date();
   title = 'todo-app';
+
+  constructor() {}
+
+  eventHandler() {
+    console.log('Parent handler called');
+  }
 }
