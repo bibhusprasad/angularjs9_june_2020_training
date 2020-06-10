@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContainerComponent } from './container/container.component';
 import { ItemsTableComponent } from './items-table/items-table.component';
 import { DetailsComponent } from './details/details.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DetailsComponent } from './details/details.component';
     ContainerComponent,
     ItemsTableComponent,
     DetailsComponent,
+    DashboardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

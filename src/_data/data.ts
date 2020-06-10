@@ -1,3 +1,5 @@
+import { NumberSymbol } from '@angular/common';
+
 export interface ToDoItem {
   id: number;
   title: string;
@@ -5,6 +7,13 @@ export interface ToDoItem {
   status: string;
   createdOn: Date | string;
   statusChangedOn: Date | string;
+}
+
+export interface AppStatistics {
+  open: number;
+  completed: number;
+  cancelled: number;
+  done: NumberSymbol;
 }
 
 export const todoList: ToDoItem[] = [
