@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContainerComponent } from './container/container.component';
 import { ItemsTableComponent } from './items-table/items-table.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ItemsTableComponent } from './items-table/items-table.component';
     NavbarComponent,
     ContainerComponent,
     ItemsTableComponent,
+    DetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
