@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TodoService } from '../_services/todo.service';
+import { ToDoItem } from 'src/_data/data';
 
 @Component({
   selector: 'app-details',
@@ -9,6 +10,8 @@ import { TodoService } from '../_services/todo.service';
 })
 export class DetailsComponent implements OnInit {
   id: number;
+  item: ToDoItem;
+
   constructor(private ar: ActivatedRoute, private todoService: TodoService) {}
 
   ngOnInit(): void {
@@ -16,8 +19,7 @@ export class DetailsComponent implements OnInit {
     if (!this.id) {
       console.log('Oops');
     } else {
-      const item = this.todoService.getItem(this.id);
-      console.log('Good', item);
+      this.item = this.todoService.getItem(this.id);
     }
   }
 }

@@ -1,1 +1,7 @@
-<p>details works!</p>
+<h2>Todo Item: {{ item.id }} | {{ item.status }}</h2>
+
+<hr />
+
+<h5>{{ item.description }}</h5>
+<p>Created on: {{ item.createdOn | date: "dd-MM-yyyy hh:mm:ss a" }}</p>
+<p>Changed on: {{ item.statusChangedOn | date: "dd-MM-yyyy hh:mm:ss a" }}</p>
