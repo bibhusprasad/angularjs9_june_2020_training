@@ -5,6 +5,7 @@
       <th scope="col">Title</th>
       <th scope="col">Created On</th>
       <th scope="col">Status</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,11 @@
       </td>
       <td>
         {{ item.status }}
+      </td>
+      <td>
+        <a class="btn btn-info btn-sm" [routerLink]="['/details', item.id]"
+          >Show</a
+        >
       </td>
     </tr>
   </tbody>
