@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TodoService } from '../_services/todo.service';
 
 @Component({
   selector: 'app-details',
@@ -8,14 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   id: number;
-  constructor(private ar: ActivatedRoute) {}
+  constructor(private ar: ActivatedRoute, private todoService: TodoService) {}
 
   ngOnInit(): void {
     this.id = +this.ar.snapshot.paramMap.get('id');
     if (!this.id) {
       console.log('Oops');
     } else {
-      console.log('Good', this.id);
+      const item = this.todoService.getItem(this.id);
+      console.log('Good', item);
     }
   }
 }

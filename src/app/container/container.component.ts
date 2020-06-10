@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { ToDoItem, todoList } from 'src/_data/data';
+import { todoList, ToDoItem } from 'src/_data/data';
+import { TodoService } from '../_services/todo.service';
 
 @Component({
   selector: 'app-container',
@@ -7,9 +8,13 @@ import { ToDoItem, todoList } from 'src/_data/data';
   styleUrls: ['./container.component.scss'],
 })
 export class ContainerComponent implements OnInit {
-  constructor() {}
-  ngOnInit(): void {}
+  currentItems: ToDoItem[];
+  pastItems: ToDoItem[];
 
-  currentItems = todoList.filter((p) => p.status === 'open');
-  pastItmes = todoList.filter((p) => p.status !== 'open');
+  constructor(private todoService: TodoService) {}
+
+  ngOnInit(): void {
+    this.currentItems = this.todoService.currentItems;
+    this.pastItems = this.todoService.pastItems;
+  }
 }
